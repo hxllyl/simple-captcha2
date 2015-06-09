@@ -55,6 +55,10 @@ module SimpleCaptcha
   mattr_accessor :tmp_path
   @@tmp_path = nil
 
+  # code tyoe default is numeric + alphabet
+  mattr_accessor :code_type
+  @@code_type = nil
+
   def self.add_image_style(name, params = [])
     SimpleCaptcha::ImageHelpers.image_styles.update(name.to_s => params)
   end

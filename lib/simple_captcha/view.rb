@@ -111,7 +111,7 @@ module SimpleCaptcha #:nodoc
       end
 
       def set_simple_captcha_data(key, options={})
-        code_type = options[:code_type]
+        code_type = options[:code_type] || SimpleCaptcha.code_type
 
         value = generate_simple_captcha_data(code_type)
         data = SimpleCaptcha::SimpleCaptchaData.get_data(key)
